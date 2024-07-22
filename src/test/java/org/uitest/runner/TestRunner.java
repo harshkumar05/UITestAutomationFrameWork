@@ -4,7 +4,8 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions()
+@CucumberOptions(features = "src/test/resources/features",
+        glue = "src/test/java/org/uitest/stepDefinitions")
 public class TestRunner {
-    // will continue tmrw good night
+
 }
