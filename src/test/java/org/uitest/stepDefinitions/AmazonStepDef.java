@@ -23,23 +23,23 @@ public class AmazonStepDef {
     }
 
     @Given("I search for a {string} in search box")
-    public void i_search_for_a_in_search_box(String string) {
-        System.out.println("Hola Amigo Mucho Gusto");
+    public void i_search_for_a_in_search_box(String productName) {
+       amazonpage.searchAGivenProductInSearchBox(productName);
     }
 
     @When("I Click the search button")
     public void i_click_the_search_button() {
-        System.out.println("Hola Amigo Mucho Gusto");
+        amazonpage.clickSearchButton();
     }
 
     @Then("I should see related or some product on the page Listed")
-    public void i_should_see_related_or_some_product_on_the_page_listed() {
-        System.out.println("Hola Amigo Mucho Gusto");
+    public void i_should_see_related_or_some_product_on_the_page_listed() throws InterruptedException {
+        amazonpage.validateValidProductSearchResult();
     }
 
-    @Then("I Select the {int} st product from the result")
-    public void i_select_the_st_product_from_the_result(Integer int1) {
-        System.out.println("Hola Amigo Mucho Gusto");
+    @Then("I Select the first product from the result")
+    public void i_select_the_first_product_from_the_result() throws InterruptedException {
+        amazonpage.iClick1stProductFromSearchResult();
     }
 
 
