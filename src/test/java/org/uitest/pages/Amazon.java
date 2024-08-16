@@ -17,7 +17,7 @@ import org.uitest.Driver.DriverFactory;
 import java.util.List;
 
 @Data
-public class Amazon {
+public class Amazon extends BasePage {
 
     @FindBy(css = "#twotabsearchtextbox")
     WebElement search_box;

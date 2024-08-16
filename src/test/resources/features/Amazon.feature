@@ -12,3 +12,5 @@ Feature: To test amazon.com website
       | macbook  |
 
 
+  Scenario
+    Given I am on the "Amazon Home" page
