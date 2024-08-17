@@ -1,9 +1,5 @@
 package org.uitest;
 
-/**
- * Hello world!
- *
- */
 public class App 
 {
 
