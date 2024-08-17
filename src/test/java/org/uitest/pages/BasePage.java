@@ -7,15 +7,15 @@ import org.uitest.utils.YamlUtils;
 
 public class BasePage {
 
-    WebDriver driver = new ChromeDriver();
+    WebDriver driver;
     YamlUtils yamlUtils = new YamlUtils();
     public BasePage(){
         super();
         this.driver=new ChromeDriver();
         PageFactory.initElements(driver,this);
     }
-
     public void hitURL(String pageName){
-        yamlUtils.getURL(pageName);
+        String url= yamlUtils.getURLFromYAML(pageName);
+        driver.get(url);
     }
 }

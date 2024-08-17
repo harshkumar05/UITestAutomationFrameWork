@@ -6,8 +6,11 @@ import org.uitest.pages.BasePage;
 public class CommonStepDefs {
 
     BasePage basePage = new BasePage();
-    @Given("I am on the {string} page")
-    public void iAmOnThePage(String arg0) {
-        basePage.hitURL(arg0);
+
+
+    @Given("I am on the {string}")
+    public void i_am_on_the(String pageName) {
+        basePage.hitURL(pageName.toLowerCase());
     }
+
 }
